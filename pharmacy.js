@@ -59,7 +59,8 @@ export class Pharmacy {
           }
         }
       }
-      if(this.drugs[i].expiresIn < new Date()){
+      let today = new Date()
+      if(this.drugs[i].expiresIn < today){
         this.drugs[i].benefit = this.drugs[i].benefit - 2;
       }
     }
